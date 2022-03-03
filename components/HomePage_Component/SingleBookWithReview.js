@@ -1,10 +1,10 @@
 import { View, Text, StyleSheet, TextInput, Button } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native';
 
 
-const SingleBookWithReview = ({ bookName, showState }) => {
+const SingleBookWithReview = ({ bookName, getTextInputValue, click }) => {
 
 
 
@@ -13,29 +13,19 @@ const SingleBookWithReview = ({ bookName, showState }) => {
             <View style={styles.container}>
                 <View style={styles.bookArea}>
                     <View style={styles.flexDirection}>
-
                         <Text style={styles.title}>{bookName}</Text>
-
-                        <TouchableOpacity style={{ marginBottom: "22%", alignItems: 'center', justifyContent: "center", padding: "5%", backgroundColor: '#fff' }}>
-                            <Icon name="close" color="red" />
-                        </TouchableOpacity>
-
-
                     </View>
-
                     <Text style={{ marginBottom: "3%" }}>When it was first published in Istanbul in 1943, it made no impression whatsoever.</Text>
                     <View style={styles.flexDirection}>
-                        <TextInput placeholder="Review" style={styles.review} />
-
-                        <TouchableOpacity style={{ marginLeft: '10%', paddingLeft: '10%', backgroundColor: '#000', padding: '5%', borderRadius: 50, }}>
-
-                            <Icon name="arrow-right" color="#fff" size={20} />
-
+                        <TextInput placeholder="Your reviews are very important to us." style={styles.review} onChangeText={getTextInputValue} />
+                        <TouchableOpacity style={{
+                            flex: 1, marginLeft: '3%', paddingLeft: 20, backgroundColor: '#000', padding: '5%', borderRadius: 50, width: 30, height: 30, display: 'flex',
+                            alignItems: 'center', justifyContent: 'center'
+                        }} onPress={click}>
+                            <Icon name="arrow-right" color="#fff" size={15} style={{ zIndex: 3, width: 15, height: 15 }} />
                         </TouchableOpacity>
                     </View>
-
                 </View>
-
             </View >
         )
     }
@@ -50,7 +40,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        backgroundColor: '#fffdd0',
+        backgroundColor: '#9e9eff',
     },
     bookArea: {
         flex: 1,

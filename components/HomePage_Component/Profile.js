@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, Image } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import UserPhoto from '../assets/girlPhoto.jpg'
+import UserPhoto from '../../assets/girlPhoto.jpg'
 
 export default function Profile() {
     return (
@@ -44,7 +44,6 @@ export default function Profile() {
 const styles = StyleSheet.create({
     container: {
         flex: 7,
-        paddingTop: '13%',
         backgroundColor: '#9e9eff',
         alignItems: 'center',
     },

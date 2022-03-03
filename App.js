@@ -9,9 +9,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 import HomePage from './components/HomePage_Component/HomePage'
 import Books from './components/HomePage_Component/Books'
-import Reviews from './components/Review'
-import Profile from './components/Profile'
-import Review from './components/Review';
+import Profile from './components/HomePage_Component/Profile'
+import Review from './components/HomePage_Component/Review';
 
 const Tab = createBottomTabNavigator();
 
