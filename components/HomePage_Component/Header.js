@@ -7,48 +7,23 @@ import UserPhoto from '../../assets/girlPhoto.jpg'
 
 export default function Header({ searchBook }) {
 
-    const [searchInput, setSearchInput] = useState(false);
-
-    if (searchInput) {
-        return (
-            <View style={styles.header}>
-                <View>
-                    <Image source={UserPhoto} style={styles.circle} />
-                </View>
-
-                <View>
-                    {searchBook()}
-                </View>
-
-                <TouchableOpacity onPress={() => { setSearchInput(!searchInput) }}>
-                    <View>
-                        <Icon name="search" size={20} color="#000" />
-                    </View>
-                </TouchableOpacity>
+    return (
+        <View style={styles.header}>
+            <View>
+                <Image source={UserPhoto} style={styles.circle} />
             </View>
-        )
-    } else {
-        return (
-            <View style={styles.header}>
-                <View>
-                    <Image source={UserPhoto} style={styles.circle} />
-                </View>
 
-                <View id="theTitle">
-                    <Text style={styles.title}> Awesome Books </Text>
-                </View>
-
-                <TouchableOpacity onPress={() => { setSearchInput(!searchInput) }}>
-                    <View>
-                        <Icon name="search" size={20} color="#000" />
-                    </View>
-                </TouchableOpacity>
+            <View id="theTitle">
+                <Text style={styles.title}> Awesome Books </Text>
             </View>
-        )
-    }
 
-
+            <View>
+                <Icon name="book" size={20} color="#000" />
+            </View>
+        </View>
+    )
 }
+
 
 const styles = StyleSheet.create({
     header: {

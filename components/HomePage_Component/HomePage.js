@@ -26,7 +26,7 @@ const HomePage = ({ navigation }) => {
 
         <View style={styles.container}>
 
-            <StatusBar backgroundColor={'#9e9eff'} />
+            <StatusBar backgroundColor={'darkblue'} />
 
             <Header searchBook={() => {
                 return (
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         paddingTop: '5%',
-        backgroundColor: '#9e9eff',
+        backgroundColor: 'darkblue',
     },
 
     header: {

@@ -44,7 +44,7 @@ export default function Profile() {
 const styles = StyleSheet.create({
     container: {
         flex: 7,
-        backgroundColor: '#9e9eff',
+        backgroundColor: 'darkblue',
         alignItems: 'center',
     },
     userProfile: {
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         marginTop: '15%',
         marginBottom: '10%',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     circle: {
         borderColor: '#B8255F',
@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 30,
         marginLeft: '7%',
+        color: 'white'
     },
     stats: {
         width: '90%',
@@ -99,6 +100,6 @@ const styles = StyleSheet.create({
         marginBottom: '10%',
         fontSize: 25,
         fontWeight: 'bold',
-        color: '#B8255F'
+        color: 'red'
     }
 })

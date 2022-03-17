@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, ScrollView, SafeAreaView } from 'react-native'
-import { React, useState } from 'react'
+import { React, useState, useEffect } from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import Review from './Review'
@@ -46,11 +46,13 @@ export default function Books({ route, navigation }) {
     }
 
     const getAnimalFarmTextInputValue = () => {
-        if (bookReviews.MansSearchforMeaningReview === "") alert('It is empty for now.')
+        if (bookReviews.AnimalFarmReview === "") alert('It is empty for now.')
         else {
+
             navigation.navigate('Reviews', {
                 reviewInfo: bookReviews
             })
+
         }
     }
 
@@ -93,8 +95,8 @@ export default function Books({ route, navigation }) {
         return (
             <View style={styles.containerView}>
                 <Text style={styles.context}> There is no book here yet. </Text>
-                <Text style={styles.context}>If you want to add a book, you can click the {<Icon name="heart" size={20} color="#b8255f" />
-                } button which below the books in {<Icon name="home" size={25} color="#000" />
+                <Text style={styles.context}>If you want to add a book, you can click the {<Icon name="heart" size={20} color="red" />
+                } button which below the books in {<Icon name="home" size={25} color="red" />
                     } page!
                     If you are looking for make a review, you can not do that before add a book.</Text>
             </View>
@@ -107,14 +109,14 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingTop: '5%',
-        backgroundColor: '#9e9eff',
+        backgroundColor: 'darkblue',
     },
     containerView: {
         flex: 1,
         paddingTop: '5%',
         paddingLeft: '5%',
         paddingRight: '5%',
-        backgroundColor: '#9e9eff',
+        backgroundColor: 'darkblue',
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -124,6 +126,7 @@ const styles = StyleSheet.create({
     context: {
         textAlign: 'center',
         fontWeight: 'bold',
+        color: 'white'
     },
     images: {
         marginBottom: '9%',

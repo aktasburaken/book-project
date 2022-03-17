@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        backgroundColor: '#9e9eff',
+        backgroundColor: 'darkblue',
     },
     bookArea: {
         flex: 1,
